@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>FlaskApp</title>
+</head>
+<style>
+  table {
+    width: 40%;
+  }
+
+  td, th {
+  text-align: left;
+}
+
+  table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+  }
+</style>  
+
+<body>
+  <table>
+    <tr>
+      <th>FIO</th>
+      <th>Gift</th>
+      <th>price</th>
+      <th>Status</th>
+    </tr>
+    {% for x in result %}
+      <tr>
+      {% for y in x %}
+      <td>{{y}}</td>
+      {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+</body>
+
+</html>
